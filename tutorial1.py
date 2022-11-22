@@ -11,15 +11,5 @@ def home():
     # using this just as a placeholder for now
 
 
-@app.route("/<name>")  # will actually print out the name that is passed
-def user(name):
-    return f"Hello {name}!"  # use this to print name out
-
-
-@app.route("/admin/")
-def admin():
-    return redirect(url_for("user", name="Admin!"))
-
-
 if __name__ == "__main__":
     app.run()
