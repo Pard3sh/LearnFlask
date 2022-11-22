@@ -1,14 +1,12 @@
-from flask import Flask, redirect, url_for
+from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__)
-adm = False
 
 
 @app.route("/")
 def home():
-    return "<h1> Home Page <h1>"
-    # can return in line HTML files
-    # using this just as a placeholder for now
+    return render_template("index.html")
+    # now instead of inline HTML we are rendering an HTML file
 
 
 if __name__ == "__main__":
